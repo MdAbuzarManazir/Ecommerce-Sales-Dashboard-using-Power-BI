@@ -33,6 +33,96 @@ Time intelligence (monthly trends)
 # Data Source:
 Excel/CSV files (Orders & Details tables shown in the Data pane).
 
-Handling null values
+# Data Model:
+Two tables visible:
+Orders
+Details
 
-Creating calculated columns
+Typical structure:
+Order ID
+Order Date
+State
+Customer Name
+Category
+Sub-Category
+Quantity
+Amount
+Payment Mode
+Profit
+
+# Relationship:
+Orders ↔ Details (usually connected via Order ID)
+
+# 📊 Dashboard Components Explained:
+# 1️⃣ KPI Insights (Core Metrics)
+Though not shown as cards, visuals summarize:
+Sum of Amount (Sales)
+Sum of Quantity
+Sum of Profit
+Total Sales = SUM(Details[Amount])
+Total Profit = SUM(Details[Profit])
+Total Quantity = SUM(Details[Quantity])
+
+# 2️⃣ Sum of Amount by State (Bar Chart)
+Shows which states generate the highest revenue.
+
+# 3️⃣ Sum of Quantity by Category (Donut Chart)
+# Categories:
+Clothing (63%)
+Electronics (21%)
+Furniture (17%)
+# Insight:
+Clothing dominates sales volume.
+
+# 5️⃣ Sum of Amount by Customer Name
+# Top customers:
+Harivansh
+Madhav
+Madan Mohan
+Shiva
+# Insight:
+Identify high-value customers for loyalty programs.
+
+# 6️⃣ Quantity by Payment Mode (Donut Chart)
+# Payment distribution:
+COD (44%) – highest
+UPI (21%)
+Debit Card (13%)
+Credit Card (12%)
+EMI (10%)
+# Insight:
+Heavy reliance on COD.
+
+# 7️⃣ Profit by Sub-Category (Horizontal Bar Chart)
+# Sub-categories:
+Printers (highest profit)
+Bookcases
+Saree
+Accessories
+Tables
+# Insight:
+Some sub-categories are more profitable even if quantity is lower.
+
+# 8️⃣ Slicers (Interactive Filters)
+🔘 Quarter Filter (Qtr 1–4)
+Allows filtering data by quarter.
+🔽 Dropdown Filter
+Filters entire dashboard (possibly by year or category).
+# Purpose:
+Enhances user interaction and dynamic analysis.
+
+# 🧠 Skills Demonstrated in This Project
+✅ Data Cleaning
+✅ Data Modeling
+✅ DAX Calculations
+✅ Data Visualization
+✅ Business Insight Generation
+✅ Dashboard Design
+✅ Interactive Reporting
+
+# 🎨 Design Features
+Dark gradient theme (professional look)
+Rounded visuals
+Consistent color palette
+Clean layout with visual grouping
+Interactive cross-filtering enabled
